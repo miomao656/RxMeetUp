@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RxMeetUp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_resource">empty_space</string>
+    <string name="search">Search</string>
+    <string name="owner">Owner</string>
+    <string name="repo">Repo</string>
+
+    <string name="def_repo">rxandroid</string>
+    <string name="der_owner">reactivex</string>
+
+</resources>

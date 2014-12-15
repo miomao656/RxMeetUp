@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="GITHUB_URL">https://api.github.com/</string>
+    <string name="WEATHER_URL">http://api.openweathermap.org/data/2.5/</string>
+    <string name="main_url">https://api.github.com/</string>
+
+</resources>
