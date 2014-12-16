@@ -17,13 +17,11 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import rx.Observable;
-import rx.Subscriber;
 
-public class RepoContributorAdapter extends BaseAdapter implements Observable.Operator<Contributor, Contributor> {
+public class RepoContributorAdapter extends BaseAdapter {
 
-    List<Contributor> contributors = Collections.emptyList();
-    Context myContext;
+    private List<Contributor> contributors = Collections.emptyList();
+    private Context myContext;
 
     public RepoContributorAdapter(Context context) {
         myContext = context;
@@ -68,28 +66,6 @@ public class RepoContributorAdapter extends BaseAdapter implements Observable.Op
         holder.contributorContributions.setText(contributor.getContributions());
 
         return convertView;
-    }
-
-    @Override
-    public Subscriber<? super Contributor> call(Subscriber<? super Contributor> subscriber) {
-        return new Subscriber<Contributor>() {
-            @Override
-            public void onCompleted() {
-                notifyDataSetChanged();
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onNext(Contributor contributor) {
-                if (contributor != null) {
-                    contributors.add(contributor);
-                }
-            }
-        };
     }
 
     static class ViewHolder {
